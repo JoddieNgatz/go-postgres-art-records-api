@@ -7,28 +7,28 @@ import (
 )
 
 
-type product struct {
+type art struct {
     ID    int     `json:"id"`
     Name  string  `json:"name"`
     Price float64 `json:"price"`
 }
 
-func (p *product) getProduct(db *sql.DB) error {
+func (p *art) getArt(db *sql.DB) error {
   return errors.New("Not implemented")
 }
 
-func (p *product) updateProduct(db *sql.DB) error {
+func (p *art) updateArt(db *sql.DB) error {
   return errors.New("Not implemented")
 }
 
-func (p *product) deleteProduct(db *sql.DB) error {
+func (p *art) deleteArt(db *sql.DB) error {
   return errors.New("Not implemented")
 }
 
-func (p *product) createProduct(db *sql.DB) error {
+func (p *art) createArt(db *sql.DB) error {
   return errors.New("Not implemented")
 }
 
-func getProducts(db *sql.DB, start, count int) ([]product, error) {
+func getArts(db *sql.DB, start, count int) ([]art, error) {
   return nil, errors.New("Not implemented")
 }
