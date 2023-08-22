@@ -17,6 +17,7 @@ type App struct {
 }
 
 func (a *App) Initialize(user, password, dbname string) {
+	
     connectionString :=
         fmt.Sprintf("user=%s password=%s dbname=%s sslmode=disable", user, password, dbname)
   
