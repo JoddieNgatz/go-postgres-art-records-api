@@ -1,8 +1,0 @@
-CREATE TABLE art
-(
-    id   BIGSERIAL PRIMARY KEY,
-    name VARCHAR(32) NOT NULL,
-    description  TEXT NOT NULL,
-    price BIGSERIAL PRIMARY KEY,
-    artist  VARCHAR(32) NOT NULL,
-);
