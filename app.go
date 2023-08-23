@@ -20,6 +20,8 @@ type App struct {
     DB     *sql.DB
 }
 
+
+
 func (a *App) Initialize(user, password, dbname string) {
 
     connectionString :=

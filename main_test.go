@@ -9,16 +9,29 @@ import (
 	"os"
 	"strconv"
 	"testing"
-	 "github.com/JoddieNgatz/go-postgres-art-records-api"
+    "github.com/JoddieNgatz/go-postgres-art-records-api"
+	"github.com/joho/godotenv"
 )
 
 var a main.App
+// use godot package to load/read the .env file and
+// return the value of the key
+func getEnv(key string) string {
 
+	// load .env file
+	err := godotenv.Load(".env")
+  
+	if err != nil {
+	  log.Fatalf("Error loading .env file")
+	}
+  
+	return os.Getenv(key)
+  }
 func TestMain(m *testing.M) {
     a.Initialize(
-        os.Getenv("DB_USERNAME"),
-        os.Getenv("DB_PASSWORD"),
-        os.Getenv("DB_NAME"))
+        getEnv("DB_USERNAME"),
+        getEnv("DB_PASSWORD"),
+        getEnv("DB_NAME"))
 
     ensureTableExists()
     code := m.Run()
